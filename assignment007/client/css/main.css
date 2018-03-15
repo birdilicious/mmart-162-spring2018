@@ -21,6 +21,13 @@ li, p {
     line-height: 1.5em;
     font-size: 0.9em;
 }
+img {
+    width: 300px;
+    border: solid 4 px;
+    padding: 2px;
+    border-radius: 4px;
+}
+
 #main {
     width: 70vw;
     margin-left: auto;

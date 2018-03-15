@@ -13,7 +13,8 @@ module.exports = {
             res.status(200).send(req.store.posts[postID])
         }
     },
-    addPost(req, res) {
+    addPost(req, res) //takes whatever the user sents and pushes it to the posts array
+    {
         console.log(req.body)
         let newPost = req.body
         let postID = req.store.posts.length

@@ -4,7 +4,7 @@ const getPosts = () => {
     fetch('http://localhost:3000/posts/').then(response =>{
         return response.json();
       }).then(showPosts)
-}
+} // fetches localhost to send index.html to server
 
 const showPosts = (posts) => {
     console.log(posts)
@@ -12,7 +12,9 @@ const showPosts = (posts) => {
     posts.forEach(post => {
         let template = `
               <h2>${post.name}</h2>
-              <a href="${post.url}">More</a>
+              <br><a href="${post.url}">More</a>
+              <br><img src="${post.imageURL}" />
+              <br><button class="button-primary" onclick="deletePost()">Delete</button> 
               <p>${post.text}</p>
               <div class="comments">
                     <h3>Comments</h3>
